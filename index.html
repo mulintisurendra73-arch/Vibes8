@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>OG Party - Real Time</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section id="authView" class="card">
+      <h1>OG Party</h1>
+      <p>Real-time party rooms</p>
+      <input id="email" type="email" placeholder="Email">
+      <input id="password" type="password" placeholder="Password">
+      <div class="row">
+        <button id="signupBtn">Create account</button>
+        <button id="loginBtn">Login</button>
+      </div>
+      <p id="authStatus"></p>
+    </section>
+
+    <section id="appView" class="hidden">
+      <header class="topbar">
+        <div><strong>OG Party</strong><small id="userLabel"></small></div>
+        <button id="logoutBtn">Logout</button>
+      </header>
+
+      <div class="grid">
+        <section class="card">
+          <h2>Party Room</h2>
+          <input id="roomId" placeholder="Room ID">
+          <div class="row">
+            <button id="createRoomBtn">Create Room</button>
+            <button id="joinRoomBtn">Join Room</button>
+          </div>
+          <p id="roomStatus">No room selected.</p>
+          <h3>Messages</h3>
+          <div id="messages" class="messages"></div>
+          <div class="row">
+            <input id="messageInput" placeholder="Type a message">
+            <button id="sendBtn">Send</button>
+          </div>
+        </section>
+
+        <aside class="card">
+          <h2>Members</h2>
+          <div id="members">Join a room to see members.</div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
